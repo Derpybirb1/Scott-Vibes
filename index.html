@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Account Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🎮 Minecraft Account Tracker</h1>
+                <p>Track the latest accounts created in real-time</p>
+            </div>
+            <div class="header-controls">
+                <button id="homeBtn" class="home-btn">
+                    <span class="home-icon">🏠</span>
+                    Homepage
+                </button>
+                <button id="refreshBtn" class="refresh-btn">
+                    <span class="refresh-icon">⟳</span>
+                    Refresh Now
+                </button>
+                <div class="status">
+                    <span id="lastUpdated">Last updated: Never</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search or type a username..." class="search-box">
+            <button id="searchBtn" class="search-btn">Search Player</button>
+            <select id="sortSelect" class="sort-select">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="name">By Name (A-Z)</option>
+            </select>
+        </div>
+
+        <div id="accountsContainer" class="accounts-grid">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading accounts...</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Minecraft Account Tracker</p>
+        </footer>
+
+        <!-- Skin Viewer Modal -->
+        <div id="skinModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="skinContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.2.0/bundles/skinview3d.bundle.min.js"></script>
+</body>
+</html>
